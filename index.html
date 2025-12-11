@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ANDY TOSS FIXER – Private Channel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg-pattern"></div>
+
+  <div class="card">
+    <div class="top-badge">
+      <span class="dot"></span>
+      Private access • ANDY TOSS FIXER
+    </div>
+
+    <div class="avatar-wrapper">
+      <div class="avatar-ring" aria-hidden="true"></div>
+      <img src="dp.jpg" alt="ANDY TOSS FIXER" class="avatar" />
+    </div>
+
+    <h1 class="name">ANDY TOSS FIXER</h1>
+    <p class="subtitle">
+      Precision <span>toss reads & match-edge insights</span> for players who back smart moves.
+    </p>
+
+    <div class="pill-row">
+      <div class="pill">Quick Toss Reads</div>
+      <div class="pill">Data-Informed Calls</div>
+      <div class="pill">Private Channel</div>
+    </div>
+
+    <div class="timer-box">
+      <div id="timer">00:30</div>
+      <div class="timer-label">access window closing</div>
+    </div>
+
+    <a href="https://t.me/+gPOME_7gDupiNmVl" class="cta-btn" id="cta">
+      Join ANDY TOSS FIXER on Telegram
+    </a>
+
+    <p class="tagline">
+      Enter a space where <span>timing & probability</span> beat noise.
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="sub-tagline">
+      Expect quick, clear toss assessments, short staking advice and pre-match pointers — trimmed for action.
+    </p>
+
+    <div class="stats-row">
+      <div>Spots open: <span>Limited</span></div>
+      <div>Mindset: <span>Disciplined & sharp</span></div>
+    </div>
+
+    <p class="disclaimer">
+      <strong>Note:</strong> No guarantees — decisions are your own. Play responsibly and only with money you can afford.
+    </p>
+  </div>
+
+  <script>
+    function startTimer(duration, display) {
+      let timer = duration, minutes, seconds;
+      const interval = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+          timer = duration;
+        }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      const countdownSeconds = 30;
+      const display = document.getElementById("timer");
+      startTimer(countdownSeconds, display);
+
+      document.getElementById("cta").addEventListener("click", function(e) {
+        e.preventDefault();
+        setTimeout(() => {
+          window.location.href = this.href;
+        }, 600);
+      });
+    };
+  </script>
+</body>
+</html>
